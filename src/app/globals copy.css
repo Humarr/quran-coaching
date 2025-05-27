@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  /* Foreground & Background */
+  /* Base Foreground/Background */
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 245, 245, 220;
   --background-end-rgb: 255, 255, 255;
@@ -14,22 +14,11 @@
   --scrollbar-thumb: #c2c2c2;
   --scrollbar-thumb-hover: #888;
 
-  /* Custom Colors with Shades */
-  --color-cream-500: #f5f5dc;
-  --color-cream-600: #deddb9;
-  --color-cream-700: #c6c69a;
-
-  --color-emerald-500: #009975;
-  --color-emerald-600: #007f5f;
-  --color-emerald-700: #005f40;
-
-  --color-deep-purple-500: #72007f;
-  --color-deep-purple-600: #5a0065;
-  --color-deep-purple-700: #43004b;
-
-  --color-warm-gold-500: #cc5500;
-  --color-warm-gold-600: #a44400;
-  --color-warm-gold-700: #7a3300;
+  /* Tailwind Colors */
+  --color-cream: #f5f5dc;
+  --color-emerald: #009975;
+  --color-deep-purple: #72007f;
+  --color-warm-gold: #cc5500;
 
   /* Fonts */
   --font-sans: var(--font-inter);
@@ -45,21 +34,10 @@
   --scrollbar-thumb: var(--scrollbar-thumb);
   --scrollbar-thumb-hover: var(--scrollbar-thumb-hover);
 
-  --color-cream-500: var(--color-cream-500);
-  --color-cream-600: var(--color-cream-600);
-  --color-cream-700: var(--color-cream-700);
-
-  --color-emerald-500: var(--color-emerald-500);
-  --color-emerald-600: var(--color-emerald-600);
-  --color-emerald-700: var(--color-emerald-700);
-
-  --color-deep-purple-500: var(--color-deep-purple-500);
-  --color-deep-purple-600: var(--color-deep-purple-600);
-  --color-deep-purple-700: var(--color-deep-purple-700);
-
-  --color-warm-gold-500: var(--color-warm-gold-500);
-  --color-warm-gold-600: var(--color-warm-gold-600);
-  --color-warm-gold-700: var(--color-warm-gold-700);
+  --color-cream: var(--color-cream);
+  --color-emerald: var(--color-emerald);
+  --color-deep-purple: var(--color-deep-purple);
+  --color-warm-gold: var(--color-warm-gold);
 
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
@@ -88,19 +66,13 @@ html {
 
 body {
   background-color: var(--color-background);
-  color: var(--color-warm-gold-700);
-  /* color: var(--color-foreground); */
+  color: var(--color-foreground);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
 }
 
@@ -132,7 +104,6 @@ h6 {
   from {
     width: 0;
   }
-
   to {
     width: 100%;
   }
@@ -143,60 +114,18 @@ h6 {
     opacity: 0;
     transform: translateY(20px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* .typewriter-text {
+.typewriter-text {
   overflow: hidden;
   border-right: 2px solid;
   white-space: nowrap;
   animation: typewriter 2s steps(40) forwards;
-} */
-
-.typewriter-text {
-  display: block;
-  overflow: hidden;
-  animation: typewriter-multiline 2.5s steps(90, end) forwards;
-  max-width: 100%;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  white-space: normal;
-  /* Allow wrapping */
-  border-right: 2px solid currentColor;
 }
-
-/* New animation */
-@keyframes typewriter-multiline {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 100%;
-  }
-}
-
-
-@keyframes fade-letter {
-  0% {
-    opacity: 0;
-    transform: translateY(0.25em);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-letter {
-  animation: fade-letter 0.4s ease-out;
-}
-
 
 .fade-in-section {
   animation: fadeIn 1s ease-in-out;
