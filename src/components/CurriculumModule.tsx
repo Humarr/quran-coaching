@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 export default function CurriculumModule() {
   const [activeModule, setActiveModule] = useState<number | null>(0)
-  
+
   const modules = [
     {
       title: "Foundations of Recitation",
@@ -50,47 +50,45 @@ export default function CurriculumModule() {
   ]
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-warm-gold-600">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-deep-purple-700 mb-6">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-cream-500 mb-6">
             What You&#34;ll Master
           </h2>
           <p className="text-xl text-foreground/90 max-w-3xl mx-auto">
             Our curriculum is designed to take you from basics to beautiful recitation in logical steps.
           </p>
         </div>
-        
+
         <div className="max-w-4xl mx-auto">
           {modules.map((module, index) => (
-            <div 
+            <div
               key={index}
               className="mb-6 border border-cream-600 rounded-xl overflow-hidden"
             >
               <button
                 onClick={() => setActiveModule(activeModule === index ? null : index)}
-                className={`w-full flex justify-between items-center p-6 text-left ${
-                  activeModule === index ? 'bg-cream-600' : 'bg-cream-500 hover:bg-cream-550'
-                } transition-colors duration-300`}
+                className={`w-full flex justify-between items-center p-6 text-left ${activeModule === index ? 'bg-cream-600' : 'bg-cream-500 hover:bg-cream-550'
+                  } transition-colors duration-300`}
               >
                 <div>
-                  <h3 className="text-2xl font-serif font-semibold text-deep-purple-700">
+                  <h3 className="text-2xl font-serif font-semibold text-warm-gold-700">
                     Module {index + 1}: {module.title}
                   </h3>
-                  <p className="text-foreground/90 mt-1">{module.description}</p>
+                  <p className="text-warm-gold/90 mt-1">{module.description}</p>
                 </div>
-                <svg 
-                  className={`w-6 h-6 transform transition-transform duration-300 ${
-                    activeModule === index ? 'rotate-180' : ''
-                  }`}
-                  fill="none" 
-                  stroke="currentColor" 
+                <svg
+                  className={`w-6 h-6 transform transition-transform duration-300 ${activeModule === index ? 'rotate-180' : ''
+                    }`}
+                  fill="none"
+                  stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                 </svg>
               </button>
-              
+
               {activeModule === index && (
                 <div className="p-6 bg-white border-t border-cream-600">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -107,7 +105,7 @@ export default function CurriculumModule() {
                         ))}
                       </ul>
                     </div>
-                    
+
                     <div className="bg-cream-100 p-5 rounded-lg border border-cream-600">
                       <div className="font-scheherazade text-3xl text-right leading-relaxed text-deep-purple-700 mb-3">
                         {module.verse.arabic}
