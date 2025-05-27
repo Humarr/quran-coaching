@@ -37,7 +37,7 @@ export default function HeroSection() {
                     </div>
                 </div>
 
-                <div className="mt-20 flex justify-center">
+                {/* <div className="mt-20 flex justify-center">
                     <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-emerald-500/30 shadow-xl">
                         <div className="absolute inset-0 bg-[url('/images/quran-hero.jpg')] bg-cover bg-center"></div>
                         <div className="absolute inset-0 bg-emerald-700/20"></div>
@@ -49,7 +49,32 @@ export default function HeroSection() {
                 <svg className="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                 </svg>
-            </div>
+            </div> */}
+            <div className="mt-20 flex justify-center">
+  <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-emerald-500/30 shadow-xl">
+    
+    {/* Base Quran image */}
+    <div className="absolute inset-0 bg-[url('/images/quran-on-stand.jpg')] bg-cover bg-center z-10"></div>
+    
+    {/* Calligraphy swirl overlay */}
+    <div className="absolute inset-0 bg-[url('/images/calligraphy-pattern.jpg')] bg-contain bg-center bg-no-repeat opacity-25 z-20"></div>
+
+    {/* Parchment texture */}
+    <div className="absolute inset-0 bg-[url('/images/parchment-overlay.jpg')] bg-cover bg-center opacity-20 z-30"></div>
+
+    {/* Emerald tint for mood */}
+    <div className="absolute inset-0 bg-emerald-700/20 z-40"></div>
+    
+  </div>
+</div>
+
+{/* Bouncing Down Arrow CTA */}
+<div className="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce">
+  <svg className="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+  </svg>
+</div>
+</div>
         </section>
     )
 }
