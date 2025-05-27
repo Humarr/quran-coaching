@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Playfair_Display, Poppins, Scheherazade_New } from 'next/font/google'
+import { Inter, Playfair_Display, Poppins, Scheherazade_New,Noto_Sans_Arabic } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({
@@ -29,6 +29,13 @@ const scheherazade = Scheherazade_New({
   display: 'swap'
 })
 
+const notoSansArabic = Noto_Sans_Arabic({
+  subsets: ['arabic'],
+  variable: '--font-noto-sans-arabic',
+  weight: ['400', '500', '600', '700'],
+});
+
+
 export const metadata: Metadata = {
   title: 'Al-Quran Al-Kareem: Your Journey to Fluent Recitation',
   description: 'Experience the Quran as it was meant to be read - with ease, beauty, and understanding.',
@@ -46,7 +53,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={``}>
-      <body className={`min-h-screen bg-cream text-gray-900 ${inter.variable} ${playfair.variable} ${poppins.variable} ${scheherazade.variable}`}>
+      <body className={`min-h-screen bg-cream text-gray-900 ${inter.variable} ${playfair.variable} ${poppins.variable} ${scheherazade.variable} ${notoSansArabic.variable}`}>
         {children}
       </body>
     </html>

@@ -29,7 +29,7 @@ export default function CourseCards() {
       ],
       cta: "Get Personal Guidance",
       popular: true,
-      color: "deep-purple"
+      color: "warm-gold"
     }
   ];
 

@@ -32,10 +32,10 @@ export default function TestimonialCarousel() {
     ]
 
     return (
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-warm-gold-700">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-deep-purple-700 mb-6">
+                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-cream-700 mb-6">
                         Real Transformations
                     </h2>
                     <p className="text-xl text-foreground/90 max-w-3xl mx-auto">
@@ -56,11 +56,11 @@ export default function TestimonialCarousel() {
                                     <h3 className="text-xl font-serif font-bold text-deep-purple-700 mr-3">
                                         {testimonials[activeTestimonial].name}
                                     </h3>
-                                    <span className="text-sm bg-emerald-100 text-emerald-800 px-2 py-1 rounded">
+                                    <span className="text-sm bg-emerald-100 text-emerald-800 px-2 py-1 rounded-full">
                                         {testimonials[activeTestimonial].role}
                                     </span>
                                 </div>
-                                <p className="text-foreground/90 mb-4">
+                                <p className="text-warm-gold-700/90 mb-4">
                                     {testimonials[activeTestimonial].content}
                                 </p>
 
@@ -70,7 +70,7 @@ export default function TestimonialCarousel() {
                                             <path d="M6.3 2.841A1.5 1.5 0 004 4.11v11.78a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"></path>
                                         </svg>
                                     </button>
-                                    <div className="text-sm text-foreground/70">
+                                    <div className="text-sm text-warm-gold-700/70">
                                         <p>Before: {testimonials[activeTestimonial].before}</p>
                                         <p>After: {testimonials[activeTestimonial].after}</p>
                                     </div>
@@ -93,11 +93,11 @@ export default function TestimonialCarousel() {
                 </div>
 
                 <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div className="bg-emerald-600 text-white p-6 rounded-xl text-center">
-                        <div className="text-4xl font-serif font-bold mb-2">2,300+</div>
+                    <div className="bg-cream-600 text-warm-gold-700 p-6 rounded-xl text-center">
+                        <div className="text-4xl font-serif font-bold mb-2">30+</div>
                         <p>Students Transformed</p>
                     </div>
-                    <div className="bg-deep-purple-600 text-white p-6 rounded-xl text-center">
+                    <div className="bg-cream-600 border border-warm-gold-500/70 text-warm-gold p-6 rounded-xl text-center">
                         <div className="text-4xl font-serif font-bold mb-2">17</div>
                         <p>Years Teaching Experience</p>
                     </div>

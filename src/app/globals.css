@@ -34,6 +34,8 @@
   /* Fonts */
   --font-sans: var(--font-inter);
   --font-serif: var(--font-poppins);
+  --font-arabic: var(--font-noto-sans-arabic);
+
 }
 
 /* === THEME INLINE === */
@@ -63,6 +65,7 @@
 
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
+  --font-arabic: var(--font-arabic)
 }
 
 /* === DARK MODE === */

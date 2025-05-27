@@ -32,6 +32,7 @@ const config: Config = {
       fontFamily: {
         serif: ['var(--font-poppins)'],
         sans: ['var(--font-inter)'],
+        arabic: ['var(--font-noto-sans-arabic)'],
         // serif: ['var(--font-poppins)', 'serif'],
         // sans: ['var(--font-inter)', 'sans-serif'],
       },
